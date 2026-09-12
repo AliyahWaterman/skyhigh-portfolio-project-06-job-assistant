@@ -1,3 +1,12 @@
+import re
+
+def strip_html(raw_html):
+    """Removes HTML tags so we get plain readable text."""
+    if not raw_html:
+        return None
+    return re.sub(r"<[^>]+>", " ", raw_html).strip()
+
+
 def normalize_greenhouse(job):
     """Convert one raw Greenhouse job into the common schema."""
     return {
@@ -5,7 +14,7 @@ def normalize_greenhouse(job):
         "company": job.get("company_name"),
         "location": job.get("location", {}).get("name"),
         "url": job.get("absolute_url"),
-        "description": None,  # Greenhouse needs a separate call for full description
+        "description": strip_html(job.get("content")),
         "posted_date": job.get("first_published"),
         "source": "greenhouse",
     }
