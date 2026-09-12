@@ -8,23 +8,34 @@ Job hunting at scale is tedious: fifteen applications a week, the same resume pa
 
 ## Architecture
 
-  Sources                Storage              Output
- [Greenhouse API] --\                                          
-                      >--> [normalize + dedupe] --> [tracker.db (SQLite)]
- [Lever API]      --/                                    |
-                                                           v
-                                              [Streamlit app: browse/save]
-                                                           |
-                                                           v
-                                              [tailor.py: local AI model]
-                                                           |
-                                                           v
-                                        [review_packet.py -> Markdown DRAFT]
-                                                           |
-                                                           v
-                                    HUMAN reviews, applies manually,
-                                       then calls mark_as_sent()
+**Data flow:**
 
+1. `sources/greenhouse.py` + `sources/lever.py` — fetch raw listings from company job boards
+2. `sources/normalize.py` — reshape both into one common format
+3. `dedupe.py` — remove duplicate listings
+4. `app.py` (Streamlit) — browse listings, save the ones you like to `tracker.db`
+5. `tailor.py` — generate tailored resume bullets for a chosen listing, using a local AI model (Ollama)
+6. `review_packet.py` — package the listing + tailored bullets into a Markdown draft file
+7. **A human reviews the draft, applies on the real site manually**
+8. `mark_as_sent()` — updates the tracker to "Applied," only after the human confirms they actually sent it
+
+```
+[Greenhouse API] ─┐
+                   ├──▶ normalize + dedupe ──▶ tracker.db (SQLite)
+[Lever API]     ───┘                                │
+                                                      ▼
+                                          Streamlit app (browse/save)
+                                                      │
+                                                      ▼
+                                          tailor.py (local AI model)
+                                                      │
+                                                      ▼
+                                    review_packet.py → Markdown DRAFT
+                                                      │
+                                                      ▼
+                              HUMAN reviews, applies manually,
+                                 then calls mark_as_sent()
+```
 
 **Flow:** `main.py` pulls listings from configured sources → normalizes and dedupes them → `app.py` (Streamlit) lets you browse and save ones you like to `tracker.db` → `tailor.py` generates tailored suggestions for a chosen listing using a local AI model → `review_packet.py` packages that into a Markdown draft → you review it, apply on the real site yourself, then call `mark_as_sent()` to update your tracker.
 
