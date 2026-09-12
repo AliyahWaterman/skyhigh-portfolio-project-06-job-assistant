@@ -1,0 +1,59 @@
+Aliyah Waterman
+Bowie, MD 20721 ∙ aliyahwater18@gmail.com ∙ (301) 646-7127
+
+PROFESSIONAL SUMMARY
+Cloud Engineer with 4 years of experience spanning cloud engineering, cloud administration, and IT infrastructure support, with hands-on expertise across AWS, Azure, and GCP environments. Experienced in designing and managing scalable cloud infrastructure, VPC networking, Kubernetes/EKS, Docker, serverless architectures, Infrastructure as Code with Terraform and CloudFormation, CI/CD automation, and cloud-native security. Strong background in AWS services including EC2, S3, IAM, Lambda, RDS, DynamoDB, CloudWatch, and CloudTrail, with additional experience in Azure and GCP services. Proficient in Linux and Windows administration, Python, Bash, PowerShell, networking, monitoring, identity and access management, data services, and enterprise infrastructure. Skilled in automating deployments, troubleshooting complex infrastructure issues, implementing security controls, and supporting highly available, reliable, and production-ready cloud environments.
+
+SKILLS
+AWS: EC2, S3, VPC, IAM, Lambda, RDS, DynamoDB, EKS, CloudWatch, CloudTrail
+Azure: VMs, VNets, Storage Accounts, Entra ID, Azure Monitor, Azure Functions
+GCP: Compute Engine, VPC, Cloud Storage, IAM, GKE, Cloud Monitoring
+Kubernetes: EKS, GKE, Docker, Helm, RBAC
+Infrastructure as Code: Terraform, CloudFormation
+CI/CD: Jenkins, GitHub, GitLab, AWS CodePipeline, CodeBuild
+Networking: TCP/IP, DNS, DHCP, VPN, Load Balancers, Firewalls
+Security: IAM, KMS, Secrets Manager, GuardDuty, Security Hub
+Monitoring: CloudWatch, CloudTrail, Azure Monitor, Cloud Monitoring
+Data: S3, RDS, DynamoDB, Glue, Athena
+Serverless: Lambda, API Gateway, EventBridge, SQS, SNS
+Linux: RHEL, Ubuntu, Bash, System Administration
+Windows: Windows Server, Active Directory, PowerShell
+Automation: Python, Bash, PowerShell, AWS CLI
+Version Control: Git, GitHub, GitLab
+
+EXPERIENCE
+
+Solecloud — Bowie, MD
+Cloud Engineer, Jul 2024 - Present
+Architected and administered AWS cloud infrastructure across EC2, VPC, S3, IAM, Lambda, CloudWatch, CloudTrail, Route 53, EBS, RDS, ELB/ALB, Auto Scaling, and other AWS-native services.
+Designed highly available VPC architectures using public/private subnets, route tables, Internet/NAT Gateways, VPC endpoints, security groups, network ACLs, DNS, and multi-AZ configurations.
+Deployed and managed production Kubernetes environments, including EKS clusters, namespaces, deployments, StatefulSets, DaemonSets, Services, Ingress, ConfigMaps, Secrets, RBAC, Helm, autoscaling, and containerized workloads.
+Developed event-driven serverless architectures using AWS Lambda, S3, EventBridge, API Gateway, SQS, and SNS, implementing automated processing workflows and asynchronous application integrations.
+Engineered secure and scalable S3 architectures using bucket policies, IAM policies, encryption with KMS, versioning, lifecycle management, replication, object-locking, access logging, and controlled cross-account access.
+Implemented Infrastructure as Code using Terraform and AWS CloudFormation, creating reusable modules/templates for provisioning compute, networking, Kubernetes, IAM, storage, monitoring, and security resources.
+Built cloud observability solutions using Amazon CloudWatch, CloudTrail, CloudWatch Logs, metrics, alarms, dashboards, VPC Flow Logs, and centralized logging to monitor infrastructure health, security events, application performance, and operational activity.
+Implemented cloud security controls using IAM least-privilege policies, IAM roles, KMS encryption, Secrets Manager, security groups, network segmentation, AWS Config, GuardDuty, Security Hub, and vulnerability-management practices.
+Designed and supported cloud data infrastructure using S3, RDS, DynamoDB, Glue, Athena, and other cloud-native data services for scalable storage, ETL, analytics, and data-processing workloads.
+Automated CI/CD and cloud operations using Git, GitHub/GitLab, Jenkins, AWS CodePipeline/CodeBuild, Docker, Kubernetes, Terraform, Python, Bash, and AWS CLI, improving deployment consistency, infrastructure automation, reliability, and operational efficiency.
+
+Morgan Stanley — Baltimore, MD
+Cloud Administrator, Jan 2023 - Jun 2024
+Administered cloud infrastructure and services, supporting the deployment, configuration, monitoring, and maintenance of cloud-based environments.
+Managed user accounts, roles, permissions, and access controls while following security and least-privilege practices.
+Monitored cloud resources, system performance, availability, and alerts to identify and resolve issues before they impacted users.
+Supported virtual machines, storage, networking, DNS, firewalls, and other core cloud infrastructure components.
+Assisted with backup, recovery, patching, and system maintenance activities to improve reliability and business continuity.
+Troubleshooted cloud, Linux, Windows, networking, and connectivity issues and escalated complex incidents when necessary.
+Documented configurations, incidents, changes, and troubleshooting procedures while following IT service-management and change-control processes.
+
+Morgan Stanley — Baltimore, MD
+IT Specialist, Jul 2021 - Dec 2022
+Provided IT support, troubleshooting hardware, software, operating system, network connectivity, and user access issues.
+Supported employee onboarding and offboarding by setting up accounts, permissions, workstations, applications, and IT equipment.
+Assisted with Linux and Windows environments, including basic system administration, user management, troubleshooting, and command-line tasks.
+Monitored and troubleshot networking issues involving TCP/IP, DNS, DHCP, Wi-Fi, VPNs, switches, and connectivity; escalated complex issues when needed.
+Used Zire Action Events to document, track, and manage IT incidents, service requests, and technical activities while maintaining accurate documentation and following IT procedures.
+
+EDUCATION & CERTIFICATIONS
+B.S. Business Systems and Processes, Minor in Information Technology — Towson University
+CompTIA Security+
