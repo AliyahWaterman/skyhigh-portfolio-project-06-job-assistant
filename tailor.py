@@ -54,10 +54,10 @@ def call_ollama(prompt):
     response.raise_for_status()
     return response.json()["response"]
 
-
 def tailor_resume(resume_text, listing):
     prompt = build_prompt(resume_text, listing)
-    return call_ollama(prompt)
+    raw_output = call_ollama(prompt)
+    return clean_tailored_output(raw_output)
 
 
 def find_relevant_listing(listings, keywords):
@@ -71,3 +71,21 @@ def find_relevant_listing(listings, keywords):
         if any(keyword.lower() in title for keyword in keywords):
             return job
     return None
+
+
+def clean_tailored_output(raw_output):
+    """
+    Cleans up the AI's raw output — removes empty bullet lines
+    (a known quirk of smaller local models leaving blank '-' placeholders).
+    """
+    lines = raw_output.split("\n")
+    cleaned_lines = [line for line in lines if line.strip() not in ("-", "")]
+
+    # If the KEYWORD GAPS section ended up with nothing real under it, say so explicitly
+    if "KEYWORD GAPS:" in raw_output:
+        gaps_section = raw_output.split("KEYWORD GAPS:")[1]
+        if not any(line.strip().startswith("-") and len(line.strip()) > 1 for line in gaps_section.split("\n")):
+            bullets_part = "\n".join(cleaned_lines).split("KEYWORD GAPS:")[0]
+            return f"{bullets_part}KEYWORD GAPS:\n- No significant gaps found."
+
+    return "\n".join(cleaned_lines)
