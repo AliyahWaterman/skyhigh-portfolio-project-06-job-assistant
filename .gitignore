@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 tracker.db
+review_packets/
